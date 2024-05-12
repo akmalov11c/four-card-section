@@ -1,0 +1,166 @@
+$--red-color: #ff637b;
+$--cyan-color: #00c8c8;
+$--orange-color: #fcae4a;
+$--blue-color: #549ef2;
+$--very-dark-blue: #4d4f62;
+$--grayish-blue: rgba(#4d4f62, 50%);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background-color: #fafafa;
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+}
+
+.container {
+  max-width: 1174px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.main {
+  margin: 80px 0;
+}
+
+.main__innner {
+  flex-direction: column;
+  gap: 64px;
+}
+
+.main__top {
+  max-width: 540px;
+  text-align: center;
+
+  .main__title {
+    font-size: 36px;
+    letter-spacing: 0.25px;
+    font-weight: 300;
+    margin-bottom: 16px;
+    color: $--very-dark-blue;
+
+    span {
+      font-weight: 600;
+    }
+  }
+
+  .main__desc {
+    font-weight: 400;
+    line-height: 25px;
+    letter-spacing: 0.1px;
+    color: $--grayish-blue;
+  }
+}
+
+.main__cards {
+  flex-wrap: wrap;
+  gap: 30px;
+
+  &-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+
+.main__card {
+  position: relative;
+  padding: 32px;
+  background-color: #fff;
+  border-radius: 10px;
+  max-width: 350px;
+  overflow: hidden;
+  box-shadow: rgba(149, 157, 165, 0.25) 0px 12px 24px;
+
+  &-line {
+    position: absolute;
+    height: 4px;
+    width: 100%;
+    top: 0;
+    left: 0;
+  }
+
+  .red {
+    background-color: $--red-color;
+  }
+  .cyan {
+    background-color: $--cyan-color;
+  }
+  .orange {
+    background-color: $--orange-color;
+  }
+  .blue {
+    background-color: $--blue-color;
+  }
+
+  &-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: $--very-dark-blue;
+    margin-bottom: 6px;
+  }
+
+  &-desc {
+    font-size: 13px;
+    font-weight: 400;
+    color: $--grayish-blue;
+    line-height: 23px;
+    letter-spacing: 0.09px;
+    margin-bottom: 40px;
+  }
+
+  &-icon {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+@media (max-width: 375px) {
+  .main {
+    margin-top: 85px;
+    margin-bottom: 78px;
+  }
+
+  .main__innner {
+    gap: 76px;
+  }
+
+  .main__top .main__title {
+    font-size: 24px;
+    letter-spacing: 0.17px;
+  }
+
+  .main__cards {
+    gap: 25px;
+
+    &-inner {
+      gap: 25px;
+    }
+  }
+
+  .main__card {
+    padding: 28px;
+
+    &-line {
+      height: 3.5px;
+    }
+
+    &-title {
+      margin-bottom: 1px;
+    }
+
+    &-desc {
+      margin-bottom: 33px;
+    }
+  }
+}
